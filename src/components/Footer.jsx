@@ -84,8 +84,8 @@ const Footer = () => {
             modules={[Autoplay]}
             loop={true}
             grabCursor={true}
-            spaceBetween={30}
-            slidesPerView={3}
+            spaceBetween={20}
+            slidesPerView={2}
             autoplay={{
               delay: 1,
               disableOnInteraction: false,
@@ -94,6 +94,9 @@ const Footer = () => {
             }}
             speed={5000}
             breakpoints={{
+              480: {
+                slidesPerView: 3,
+              },
               640: {
                 slidesPerView: 4,
               },

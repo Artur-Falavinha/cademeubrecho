@@ -5,7 +5,6 @@ import NewsletterSection from '../components/NewsletterSection';
 import ContentSection from '../components/ContentSection';
 import GlossarySection from '../components/GlossarySection';
 import Footer from '../components/Footer';
-import CustomCursor from '../components/CustomCursor';
 import PageTransition from '../components/PageTransition';
 import FloatingParticles from '../components/FloatingParticles';
 import SectionDivider from '../components/SectionDivider';
@@ -19,7 +18,6 @@ const Home = () => {
         <DecorativePattern />
         <ScrollProgress />
         <FloatingParticles />
-        <CustomCursor />
         <Navbar />
         <main className="pt-20 relative z-10">
           <HeroSection />
