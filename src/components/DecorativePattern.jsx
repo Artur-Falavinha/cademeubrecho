@@ -1,6 +1,10 @@
 import { motion } from 'framer-motion';
 
 const DecorativePattern = () => {
+  const isMobile = window.innerWidth < 768;
+  
+  if (isMobile) return null;
+  
   return (
     <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden opacity-30">
       {/* Linhas diagonais sutis */}

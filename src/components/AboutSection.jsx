@@ -12,31 +12,33 @@ const AboutSection = () => {
       {/* Background gradiente suave */}
       <div className="absolute inset-0 bg-gradient-to-br from-pink-50/80 via-white/50 to-green-50/80"></div>
       
-      {/* Elementos decorativos sutis */}
-      <motion.div 
-        className="absolute top-20 right-10 w-64 h-64 rounded-full bg-pink-200/10 blur-3xl"
-        animate={{
-          scale: [1, 1.2, 1],
-          opacity: [0.3, 0.5, 0.3],
-        }}
-        transition={{
-          duration: 8,
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
-      />
-      <motion.div 
-        className="absolute bottom-20 left-10 w-64 h-64 rounded-full bg-green-200/10 blur-3xl"
-        animate={{
-          scale: [1, 1.3, 1],
-          opacity: [0.3, 0.5, 0.3],
-        }}
-        transition={{
-          duration: 10,
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
-      />
+      {/* Elementos decorativos sutis - apenas desktop */}
+      <div className="hidden md:block">
+        <motion.div 
+          className="absolute top-20 right-10 w-64 h-64 rounded-full bg-pink-200/10 blur-3xl"
+          animate={{
+            scale: [1, 1.2, 1],
+            opacity: [0.3, 0.5, 0.3],
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+        <motion.div 
+          className="absolute bottom-20 left-10 w-64 h-64 rounded-full bg-green-200/10 blur-3xl"
+          animate={{
+            scale: [1, 1.3, 1],
+            opacity: [0.3, 0.5, 0.3],
+          }}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+      </div>
       
       <div className="max-w-6xl mx-auto relative z-10 px-4" ref={ref}>
         <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">

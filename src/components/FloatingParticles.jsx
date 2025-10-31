@@ -1,7 +1,10 @@
 import { motion } from 'framer-motion';
 
 const FloatingParticles = () => {
-  const particles = Array.from({ length: 20 }, (_, i) => ({
+  const isMobile = window.innerWidth < 768;
+  const particleCount = isMobile ? 5 : 20;
+  
+  const particles = Array.from({ length: particleCount }, (_, i) => ({
     id: i,
     size: Math.random() * 4 + 2,
     x: Math.random() * 100,
