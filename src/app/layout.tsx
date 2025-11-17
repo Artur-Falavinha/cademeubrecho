@@ -20,7 +20,7 @@ const inter = Inter({
   display: "swap",
 });
 
-const siteUrl = "https://artur-falavinha.github.io/cademeubrecho";
+const siteUrl = "https://cademeubrecho.github.io";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -85,7 +85,7 @@ export default function RootLayout({
         <div className="flex min-h-screen flex-col bg-background/90">
           <SiteHeader />
           <main className="flex-1">
-            <div className="mx-auto w-full max-w-[1600px] px-4 pb-16 pt-8 md:px-6 lg:px-14">
+            <div className="mx-auto w-full max-w-[1600px] px-4 pt-4 md:px-6 lg:px-14">
               {children}
             </div>
           </main>

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Instagram, Mail, MapPin, MessageCircle, Music3, Phone, Youtube } from "lucide-react";
+import { Mail, MessageCircle, Music3, Youtube } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -16,12 +16,6 @@ const contactChannels = [
     icon: Mail,
   },
   {
-    label: "Instagram",
-    href: "https://www.instagram.com/",
-    description: "Editorial visual, bastidores das produções e agenda de eventos presenciais.",
-    icon: Instagram,
-  },
-  {
     label: "YouTube",
     href: "https://www.youtube.com/",
     description: "Documentários curtos, entrevistas e séries exclusivas sobre moda circular curitibana.",
@@ -30,20 +24,14 @@ const contactChannels = [
   {
     label: "Spotify",
     href: "https://open.spotify.com/",
-    description: "Podcast quinzenal com entrevistas, trends e conversas sobre consumo consciente.",
+    description: "Podcast com entrevistas e conversas sobre consumo consciente.",
     icon: Music3,
   },
   {
     label: "WhatsApp",
-    href: "https://wa.me/",
-    description: "Canal direto com alertas de garimpo, drops de conteúdo e convites para encontros.",
+    href: "https://whatsapp.com/channel/0029VbBaSRE0VycCjdDdNX3I",
+    description: "Canal da comunidade com conteúdos e informações sobre moda circular.",
     icon: MessageCircle,
-  },
-  {
-    label: "Telefone",
-    href: "tel:+5541999999999",
-    description: "Atendimento durante eventos e plantões especiais.",
-    icon: Phone,
   },
 ];
 
@@ -67,25 +55,14 @@ export function ContatoPageContent() {
           acompanhe nossas redes e participe da comunidade que transforma o consumo em Curitiba.
         </p>
 
-        <div className="grid gap-6 md:grid-cols-3">
-          <div className="rounded-3xl bg-secondary/10 p-6 text-secondary-foreground">
-            <Badge className="mb-4 rounded-full bg-secondary px-4 py-1 text-[11px] font-semibold uppercase tracking-[0.3em] text-secondary-foreground">
-              sede criativa
-            </Badge>
-            <div className="flex items-start gap-3 text-sm md:text-base">
-              <MapPin className="mt-1 h-5 w-5" />
-              <p>
-                Curitiba • Paraná <br />
-                Centro histórico e polos criativos
-              </p>
-            </div>
-          </div>
+        <div className="grid gap-6 md:grid-cols-2">
           <div className="rounded-3xl bg-primary/10 p-6 text-primary-foreground">
             <Badge className="mb-4 rounded-full bg-primary px-4 py-1 text-[11px] font-semibold uppercase tracking-[0.3em] text-primary-foreground">
-              horário editorial
+              localização
             </Badge>
             <p className="text-sm md:text-base">
-              Segunda a sexta, das 9h às 18h, com cobertura de eventos e garimpos especiais aos sábados.
+              Curitiba • Paraná<br />
+              Projeto editorial sobre moda circular
             </p>
           </div>
           <div className="rounded-3xl border border-border/80 bg-white p-6 text-primary-foreground shadow-sm">
@@ -178,9 +155,6 @@ export function ContatoPageContent() {
               className="block text-lg font-semibold underline-offset-4 hover:underline"
             >
               contato@cademeubrecho.com.br
-            </Link>
-            <Link href="tel:+5541999999999" className="block text-sm font-medium hover:underline">
-              +55 (41) 9 9999-9999
             </Link>
           </div>
         </div>

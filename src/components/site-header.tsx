@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { assetPath } from "@/lib/assetPath";
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -18,6 +19,7 @@ const navItems: NavItem[] = [
   { title: "Quem Somos", href: "/quem-somos" },
   { title: "Conteúdos", href: "/conteudos" },
   { title: "Newsletter", href: "/newsletter" },
+  { title: "Glossário", href: "/glossario" },
   { title: "Contato", href: "/contato" },
 ];
 
@@ -31,7 +33,7 @@ export function SiteHeader() {
         <Link href="/" className="flex items-center gap-4" onClick={() => setIsOpen(false)}>
           <div className="relative h-9 w-36 md:h-10 md:w-40">
             <Image
-              src="/textoLogo.png"
+              src={assetPath("/textoLogo.png")}
               alt="Cadê Meu Brechó?"
               fill
               sizes="160px"
@@ -57,6 +59,7 @@ export function SiteHeader() {
                 <li key={item.title}>
                   <Link
                     href={item.href}
+                    prefetch={false}
                     onClick={() => setIsOpen(false)}
                     className={cn(
                       "group inline-flex w-full items-center justify-between rounded-full px-4 py-2 text-sm font-medium tracking-wide transition-colors",

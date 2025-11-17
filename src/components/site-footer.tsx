@@ -1,13 +1,8 @@
 import Link from "next/link";
 
-import { Instagram, Mail, Youtube, MessageCircle, Music3 } from "lucide-react";
+import { Mail, Youtube, MessageCircle, Music3 } from "lucide-react";
 
 const links = [
-  {
-    label: "Instagram",
-    href: "https://www.instagram.com/",
-    icon: Instagram,
-  },
   {
     label: "YouTube",
     href: "https://www.youtube.com/",
@@ -20,7 +15,7 @@ const links = [
   },
   {
     label: "WhatsApp",
-    href: "https://wa.me/",
+    href: "https://whatsapp.com/channel/0029VbBaSRE0VycCjdDdNX3I",
     icon: MessageCircle,
   },
   {
@@ -32,7 +27,7 @@ const links = [
 
 export function SiteFooter() {
   return (
-    <footer className="mt-16 border-t border-border/70 bg-white/80">
+    <footer className="mt-8 border-t border-border/70 bg-white/80">
       <div className="mx-auto flex w-full max-w-[1600px] flex-col gap-10 px-4 py-10 md:px-6 lg:px-14">
         <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
           <div className="max-w-lg space-y-3">
@@ -64,10 +59,10 @@ export function SiteFooter() {
         <div className="flex flex-col gap-4 border-t border-border/70 pt-6 text-xs text-muted-foreground md:flex-row md:items-center md:justify-between">
           <p>© {new Date().getFullYear()} Cadê Meu Brechó?. Produzido por idealizadoras curitibanas.</p>
           <div className="flex flex-wrap gap-4">
-            <Link href="/politica-de-privacidade" className="hover:text-primary-foreground">
+            <Link href="/politica-de-privacidade" prefetch={false} className="hover:text-primary-foreground">
               Política de Privacidade
             </Link>
-            <Link href="/termos-de-uso" className="hover:text-primary-foreground">
+            <Link href="/termos-de-uso" prefetch={false} className="hover:text-primary-foreground">
               Termos de Uso
             </Link>
           </div>

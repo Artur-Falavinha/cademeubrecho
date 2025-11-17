@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { Feather, Sparkles } from "lucide-react";
 
-import { NewsletterForm } from "@/components/newsletter-form";
+
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
@@ -13,76 +13,64 @@ const newsletters = [
     author: "Isabelle Sestari",
     content: [
       "Curitiba está vivendo uma verdadeira revolução fashion. Brechós deixaram de ser espaços esquecidos para se tornarem destinos obrigatórios para quem busca estilo, economia e consciência. Mas afinal, quem são os consumidores dessa moda circular? E por que cada vez mais curitibanos estão preferindo roupas usadas?",
-      "Segundo especialistas, três fatores explicam o crescimento da moda de segunda mão: economia com peças de qualidade e tecidos nobres; consciência ambiental para reduzir impactos e prolongar o ciclo de vida das roupas; e cultura e estilo, já que moda é cíclica e ressignificar peças é tendência criativa.",
-      "Comprar em brechó não é apenas sobre economizar, é sobre dar significado às roupas e integrar um movimento que valoriza história e sustentabilidade. O público curitibano que garimpa é descolado, consciente e antenado: quer saber quem fez suas roupas, busca peças que expressem identidade e acredita no design para a sustentabilidade.",
-      "Décadas atrás, brechós eram vistos como espaços desorganizados. Hoje, a curadoria cuidadosa, peças bem conservadas e ambientes convidativos atraem um público cada vez maior e consolidam a moda de segunda mão como estilo de vida.",
-      "O futuro é circular: jovens influenciam as famílias, pessoas com mais de 70 anos redescobrem peças com qualidade e conforto, e cresce a ideia de reconfigurar roupas para dar nova vida aos tecidos.",
-      "Comprar de segunda mão não é só sobre preço: é sobre história, identidade e responsabilidade. Escolher peças que duram ajuda a construir um futuro mais sustentável para a moda.",
-      "Quer descobrir onde garimpar? Acesse o app do Cadê Meu Brechó? e encontre os melhores brechós da capital paranaense para iniciar sua jornada na moda circular.",
+      "O que está por trás desse movimento?",
+      "Segundo especialistas, três fatores explicam o crescimento da moda de segunda mão:", "- Economia: peças de qualidade, tecidos nobres e preços acessíveis.",
+      "- Consciência ambiental: reduzir impactos e prolongar o ciclo de vida das roupas.", "- Cultura e estilo: moda é cíclica, e ressignificar peças é tendência criativa.",
+      "Comprar em brechó não é só sobre economizar, é sobre dar significado às roupas e fazer parte de um movimento que valoriza história e sustentabilidade.",
+      "Quem é o consumidor curitibano de brechó?",
+      "O perfil mais comum é descolado, consciente e antenado. Essa pessoa quer saber quem fez suas roupas, se preocupa com condições de trabalho e busca peças que expressem identidade. É um público que entende que moda sustentável não é 100% possível, mas acredita no design para a sustentabilidade e na circularidade: usar, transformar, trocar e reinventar.",
+      "Curitiba e seus brechós: do mofo à curadoria premium",
+      "Décadas atrás, brechós eram vistos como espaços desorganizados, com peças jogadas e cheiro de mofo. Hoje, a realidade é outra: curadoria cuidadosa, peças bem conservadas e ambientes convidativos. Essa mudança atraiu um público cada vez maior e consolidou a moda de segunda mão como estilo de vida, não apenas uma tendência passageira.",
+      "Mas há desafios:",
+      "Preços elevados em alguns brechós, que afastam consumidores. Falta de conexão entre discurso e prática, já que muitos ainda compram fast fashion enquanto falam de sustentabilidade.",
+      "O futuro da moda circular em Curitiba",
+      "A tendência é clara: esse consumo vai se fortalecer. A geração jovem influencia pais e familiares, e até pessoas com mais de 70 anos estão aderindo aos brechós, buscando peças com qualidade, estética e conforto que não encontram no varejo tradicional. Além disso, cresce a ideia de reconfigurar peças e dar nova vida a excedentes de coleções, agregando valor e mantendo o componente de moda.",
+      "Por que isso importa?",
+      "Comprar de segunda mão não é só sobre preço: é sobre história, identidade e responsabilidade. É sobre escolher peças que duram, que carregam significado e que ajudam a construir um futuro mais sustentável para a moda.",
+      "Quer descobrir onde garimpar?",
+      "Acesse o App do Cadê Meu Brechó? e encontre os melhores brechós da capital paranaense para começar sua jornada na moda circular.",
     ],
   },
   {
     title: "Futuro dos Brechós: a geração consciente e a moda que se reinventa",
     author: "Julia Budal",
     content: [
-      "A moda está mudando, e a nova geração tem papel fundamental nesse processo. Jovens repensam a forma de consumir e se vestir, e os brechós ocupam um lugar central nesse movimento. O que antes era sinônimo de necessidade hoje é expressão, identidade e consciência coletiva.",
-      "A Geração Z ressignifica o consumo de segunda mão, motivada por questões econômicas e pela busca por autenticidade. Vestir-se deixa de ser seguir tendências para ser construir um estilo próprio alinhado a sustentabilidade e criatividade.",
-      "Nath Alencar, criadora de conteúdo em Curitiba, compartilha roteiros de garimpo e mostra como o brechó é um espaço de liberdade. Jovens abandonaram o preconceito e descobriram um mar de oportunidades para se expressar com qualquer valor.",
-      "Redes sociais impulsionam esse movimento. Vídeos de tours, looks e bastidores criam comunidade e inspiram novas pessoas a experimentar a moda circular. Os brechós modernos de Curitiba investem em curadoria, decoração e experiências integradas, tornando-se pontos de encontro entre moda, sustentabilidade e cultura urbana.",
-      "A crise de acessibilidade das roupas novas e o distanciamento do luxo tradicional reforçam o papel dos brechós. A exclusividade mora na criatividade e no propósito, não no preço.",
-      "A moda circular veio para ficar. Fast fashions sentem a pressão, mas a geração consciente mantém o movimento vivo. O futuro dos brechós está ligado a quem enxerga a roupa como ferramenta de expressão e transformação social.",
+      "A moda está mudando, e a nova geração tem papel fundamental nesse processo. Cada vez mais jovens estão repensando a forma de consumir e se vestir, e os brechós ocupam um lugar central nesse movimento. O que antes era sinônimo de economia e necessidade hoje se transformou em um ato de expressão, identidade e consciência coletiva.",
+      "A chamada Geração Z vem ressignificando o consumo de segunda mão. Essa mudança é movida tanto por questões econômicas quanto por uma busca por autenticidade. Vestir-se, para esses jovens, não é apenas acompanhar tendências, mas construir um estilo próprio que dialogue com valores como sustentabilidade e criatividade. Em vez de seguir o ritmo acelerado da moda industrial, eles optam por um consumo mais afetivo e sustentável, e os brechós são o espaço ideal para isso.",
+      "Um exemplo dessa transformação é Nath Alencar, 23 anos, criadora de conteúdo e “exploradora de brechós” em Curitiba. O interesse pela moda circular surgiu de forma espontânea, quando ela se mudou de Belém para o sul do país. “Eu cheguei em Curitiba só com roupas de calor e percebi o quanto as lojas de departamento eram inacessíveis, principalmente com roupa de frio. Comecei a garimpar por necessidade, e hoje não parei mais”, conta.",
+      "O que começou como uma solução prática acabou se transformando em conteúdo digital. Nath gravou o primeiro vídeo com um roteiro de garimpo pelos brechós do centro de Curitiba, mostrando lojas, peças e dicas de compra. O vídeo viralizou e, desde então, ela segue produzindo vídeos sobre moda circular e economia criativa. “Foi tudo muito natural. Eu fiz um vídeo só pra ajudar uma amiga, e de repente vi que as pessoas queriam muito esse tipo de conteúdo”, explica.",
+      "Para Nath, o brechó é um espaço de liberdade. “A galera mais nova perdeu aquele preconceito de achar que brechó é roupa velha ou suja. Hoje é o contrário: é um mar de oportunidades. Você pode ser estiloso com qualquer tipo de roupa e qualquer valor”, diz. A relação com a moda passa a ser menos sobre status e mais sobre criatividade. O luxo deixa de estar no preço e passa a estar na autenticidade de quem veste.",
+      "As redes sociais têm papel essencial nesse processo. É nelas que os brechós e criadores de conteúdo se conectam com o público jovem, mostrando que é possível consumir de forma consciente sem abrir mão do estilo. No TikTok e no Instagram, vídeos de “garimpo”, provas de looks e tours por brechós locais se multiplicam. “O caminho pra alcançar o público é fazer um conteúdo que as pessoas vão salvar, que vai ser útil pra elas. Mostrar o que realmente dá pra encontrar”, afirma Nath.",
+      "Essa comunicação direta e espontânea gera identificação e cria uma comunidade em torno da moda circular. O público de Nath é diverso, mas majoritariamente feminino, formado por pessoas que buscam inspiração e também informação. “Recebo mensagens de gente que diz que foi num brechó porque viu meu vídeo. As pessoas confiam nessa troca, confiam na experiência”, conta.",
+      "Em Curitiba, o movimento ganha força com a abertura de brechós modernos, que investem em curadoria, decoração criativa e até cafés integrados ao espaço. Esses lugares se tornam pontos de encontro entre moda, sustentabilidade e cultura urbana. “Eu vejo que as lojas estão se adaptando pra alcançar essa galera. Tem muito espaço legal surgindo, com pegada jovem e criativa. A moda tá se reinventando porque precisa”, diz Nath.",
+      "O crescimento da moda circular também se explica pela crise de acessibilidade das roupas novas. Com o aumento dos preços e a popularização de influenciadores de luxo, a moda se distancia da realidade da maioria. Os brechós, por outro lado, aproximam as pessoas da possibilidade de se expressar com liberdade. “Você não precisa do luxo pra ser exclusivo, precisa de criatividade e propósito”, resume Nath.",
+      "Para ela, esse não é um movimento passageiro. “As fast fashions vão sentir a pressão e tentar trazer esse público de volta, mas acho que vai ser algo pau a pau. A moda circular veio pra ficar.”",
+      "O futuro dos brechós, portanto, está diretamente ligado a essa geração consciente, que entende a roupa como ferramenta de expressão e transformação social. Mais do que tendência, a moda de segunda mão representa uma mudança cultural, um novo olhar para o consumo, para o meio ambiente e para o próprio ato de vestir.",
     ],
   },
 ];
 
 export function NewsletterPageContent() {
   return (
-    <div className="space-y-16">
-      <motion.section
-        className="grid gap-10 rounded-3xl border border-border/80 bg-white/90 px-6 py-12 shadow-sm md:grid-cols-[1.1fr,0.9fr] md:px-12"
-        initial={{ opacity: 0, y: 24 }}
+    <div className="space-y-8 sm:space-y-10">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7 }}
+        transition={{ duration: 0.5 }}
+        className="rounded-2xl border border-border/60 bg-gradient-to-r from-primary/5 to-secondary/5 px-6 py-6 text-center md:rounded-3xl md:px-8 md:py-8"
       >
-        <div className="space-y-6">
-          <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.45em] text-secondary-foreground/70">
-            <Sparkles className="h-4 w-4" />
-            cadê meu brechó? – newsletter
-          </span>
-          <h1 className="font-heading text-4xl leading-tight text-primary-foreground md:text-5xl">
-            Assine nossa newsletter editorial
-          </h1>
-          <p className="text-base text-muted-foreground md:text-lg">
-            Receba histórias inéditas, bastidores dos brechós curitibanos, convites para eventos exclusivos e referências de moda
-            circular diretamente no seu e-mail.
-          </p>
-          <div className="grid gap-4 text-sm text-muted-foreground">
-            <p className="flex items-start gap-3">
-              <Feather className="mt-1 h-5 w-5 text-primary" />
-              Editorial quinzenal com entrevistas, guias de garimpo e dicas práticas para vestir circularidade.
-            </p>
-            <p className="flex items-start gap-3">
-              <Feather className="mt-1 h-5 w-5 text-secondary" />
-              Convites para encontros presenciais, podcasts e tours guiados por brechós de Curitiba.
-            </p>
-          </div>
-        </div>
-        <NewsletterForm />
-      </motion.section>
+        <span className="text-xs font-semibold uppercase tracking-[0.4em] text-secondary-foreground/70">
+          newsletters publicadas
+        </span>
+        <h1 className="mt-2 font-heading text-2xl text-primary-foreground md:text-3xl">
+          Confira abaixo nossas newsletters editoriais
+        </h1>
+        <p className="mt-2 text-sm text-muted-foreground">
+          Histórias e análises sobre moda circular em Curitiba
+        </p>
+      </motion.div>
 
-      <section className="space-y-10">
-        <div className="space-y-3">
-          <span className="text-xs font-semibold uppercase tracking-[0.4em] text-secondary-foreground/70">
-            edições anteriores
-          </span>
-          <h2 className="font-heading text-3xl text-primary-foreground md:text-4xl">
-            Leia as newsletters que já estão nas caixas de entrada
-          </h2>
-          <p className="max-w-3xl text-sm text-muted-foreground md:text-base">
-            Enquanto você aguarda a próxima edição, explore o conteúdo completo das newsletters que inspiraram a comunidade Cadê
-            Meu Brechó? a transformar o consumo de moda em Curitiba.
-          </p>
-        </div>
+      <section className="space-y-8">
 
         <div className="grid gap-8 md:grid-cols-2">
           {newsletters.map((newsletter, index) => (
@@ -117,6 +105,21 @@ export function NewsletterPageContent() {
           ))}
         </div>
       </section>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="rounded-3xl border border-border/60 bg-gradient-to-br from-muted/30 to-muted/50 px-6 py-8 text-center md:px-12"
+      >
+        <h3 className="font-heading text-2xl text-primary-foreground md:text-3xl">
+          Novas newsletters em breve
+        </h3>
+        <p className="mt-3 text-sm text-muted-foreground md:text-base">
+          Estamos preparando mais conteúdos editoriais sobre moda circular.
+        </p>
+      </motion.div>
     </div>
   );
 }
