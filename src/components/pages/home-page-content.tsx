@@ -42,7 +42,7 @@ export function HomePageContent() {
   return (
     <div className="space-y-10 sm:space-y-12 md:space-y-16">
       <motion.section
-        className="relative h-[calc(100vh-90px)] overflow-hidden rounded-3xl border border-border/80 bg-white shadow-sm"
+        className="relative h-[calc(100vh-90px)] overflow-hidden rounded-3xl border border-white/50 bg-white shadow-sm"
         initial={{ opacity: 0, y: 24 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
@@ -88,15 +88,15 @@ export function HomePageContent() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="rounded-2xl border border-border/60 bg-gradient-to-r from-primary/5 to-secondary/5 px-6 py-6 text-center md:rounded-3xl md:px-8 md:py-8"
+        className="rounded-2xl border border-white/50 bg-white/98 shadow-xl border border-white/50 px-6 py-6 text-center md:rounded-3xl md:px-8 md:py-8"
       >
         <span className="text-xs font-semibold uppercase tracking-[0.4em] text-secondary-foreground/70">
           matérias publicadas
         </span>
-        <h2 className="mt-2 font-heading text-2xl text-primary-foreground md:text-3xl">
+        <h2 className="mt-2 font-heading text-2xl text-foreground md:text-3xl">
           Confira abaixo nossos conteúdos editoriais
         </h2>
-        <p className="mt-2 text-sm text-muted-foreground">
+        <p className="mt-2 text-sm text-foreground/70">
           Reportagens e análises sobre moda circular em Curitiba
         </p>
       </motion.div>
@@ -107,20 +107,20 @@ export function HomePageContent() {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.7 }}
-        className="grid gap-8 rounded-3xl border border-border/80 bg-white/80 px-6 py-12 shadow-sm md:px-12"
+        className="grid gap-8 rounded-3xl border border-white/50 bg-white/98 shadow-xl border border-white/50 px-6 py-12 md:px-12"
       >
         <div className="space-y-3">
-          <Badge className="w-fit rounded-full bg-primary/15 px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-primary-foreground">
+          <Badge className="w-fit rounded-full bg-primary/15 px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-foreground">
             reportagem
           </Badge>
-          <h3 className="font-heading text-3xl leading-tight text-primary-foreground md:text-4xl">
+          <h3 className="font-heading text-3xl leading-tight text-foreground md:text-4xl">
             Moda circular: o novo ciclo da economia que começa nos brechós de Curitiba
           </h3>
-          <p className="text-sm uppercase tracking-[0.3em] text-muted-foreground whitespace-nowrap">
+          <p className="text-sm uppercase tracking-[0.3em] text-foreground/70 whitespace-nowrap">
             por Isabelle Sestari
           </p>
         </div>
-        <div className="space-y-6 text-base leading-relaxed text-muted-foreground md:text-lg">
+        <div className="space-y-6 text-base leading-relaxed text-foreground/70 md:text-lg">
           {realArticleContent.map((paragraph, index) => (
             <p key={index}>{paragraph}</p>
           ))}
@@ -132,12 +132,12 @@ export function HomePageContent() {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="rounded-3xl border border-border/60 bg-gradient-to-br from-muted/30 to-muted/50 px-6 py-8 text-center md:px-12"
+        className="rounded-3xl border border-white/50 bg-white/98 shadow-xl border border-white/50 px-6 py-8 text-center md:px-12"
       >
-        <h3 className="font-heading text-2xl text-primary-foreground md:text-3xl">
+        <h3 className="font-heading text-2xl text-foreground md:text-3xl">
           Novas matérias em breve
         </h3>
-        <p className="mt-3 text-sm text-muted-foreground md:text-base">
+        <p className="mt-3 text-sm text-foreground/70 md:text-base">
           Estamos preparando mais conteúdos sobre moda circular em Curitiba.
         </p>
       </motion.div>

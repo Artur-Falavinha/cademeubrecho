@@ -28,7 +28,7 @@ export function SiteHeader() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border/70 bg-white/90 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-white/50 bg-white/98 shadow-xl">
       <div className="mx-auto flex w-full max-w-[1600px] items-center justify-between gap-6 px-4 py-4 md:px-6 lg:px-14">
         <Link href="/" className="flex items-center gap-4" onClick={() => setIsOpen(false)}>
           <div className="relative h-9 w-36 md:h-10 md:w-40">

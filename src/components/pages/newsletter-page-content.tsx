@@ -57,22 +57,22 @@ export function NewsletterPageContent() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="rounded-2xl border border-border/60 bg-gradient-to-r from-primary/5 to-secondary/5 px-6 py-6 text-center md:rounded-3xl md:px-8 md:py-8"
+        className="rounded-2xl border border-white/50 bg-white/98 shadow-xl border border-white/50 px-6 py-6 text-center md:rounded-3xl md:px-8 md:py-8"
       >
         <span className="text-xs font-semibold uppercase tracking-[0.4em] text-secondary-foreground/70">
           newsletters publicadas
         </span>
-        <h1 className="mt-2 font-heading text-2xl text-primary-foreground md:text-3xl">
+        <h1 className="mt-2 font-heading text-2xl text-foreground md:text-3xl">
           Confira abaixo nossas newsletters editoriais
         </h1>
-        <p className="mt-2 text-sm text-muted-foreground">
+        <p className="mt-2 text-sm text-foreground/70">
           Histórias e análises sobre moda circular em Curitiba
         </p>
       </motion.div>
 
-      <section className="space-y-8">
+      <section className="space-y-8 bg-transparent">
 
-        <div className="grid gap-8 md:grid-cols-2">
+        <div className="grid gap-8 md:grid-cols-2 bg-transparent">
           {newsletters.map((newsletter, index) => (
             <motion.article
               key={newsletter.title}
@@ -81,20 +81,20 @@ export function NewsletterPageContent() {
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
-              <Card className="h-full overflow-hidden border-border/70 bg-white/85 shadow-sm transition-shadow hover:shadow-xl">
+              <Card className="h-full overflow-hidden border-white/50 bg-white/98 shadow-sm  ">
                 <CardHeader className="space-y-4 bg-gradient-to-br from-primary/20 via-white to-secondary/20 px-6 py-6">
-                  <Badge className="w-fit rounded-full bg-primary/20 px-4 py-1 text-[11px] font-semibold uppercase tracking-[0.3em] text-primary-foreground">
+                  <Badge className="w-fit rounded-full bg-primary/20 px-4 py-1 text-[11px] font-semibold uppercase tracking-[0.3em] text-foreground">
                     newsletter
                   </Badge>
-                  <CardTitle className="font-heading text-2xl leading-snug text-primary-foreground">
+                  <CardTitle className="font-heading text-2xl leading-snug text-foreground">
                     {newsletter.title}
                   </CardTitle>
-                  <p className="text-xs font-semibold uppercase tracking-[0.35em] text-muted-foreground">
+                  <p className="text-xs font-semibold uppercase tracking-[0.35em] text-foreground/70">
                     por {newsletter.author}
                   </p>
                 </CardHeader>
                 <CardContent className="px-6 py-6">
-                  <CardDescription className="space-y-4 text-base leading-relaxed text-muted-foreground">
+                  <CardDescription className="space-y-4 text-base leading-relaxed text-foreground/70">
                     {newsletter.content.map((paragraph, paragraphIndex) => (
                       <p key={paragraphIndex}>{paragraph}</p>
                     ))}
@@ -111,12 +111,12 @@ export function NewsletterPageContent() {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="rounded-3xl border border-border/60 bg-gradient-to-br from-muted/30 to-muted/50 px-6 py-8 text-center md:px-12"
+        className="rounded-3xl border border-white/50 bg-white/98 shadow-xl border border-white/50 px-6 py-8 text-center md:px-12"
       >
-        <h3 className="font-heading text-2xl text-primary-foreground md:text-3xl">
+        <h3 className="font-heading text-2xl text-foreground md:text-3xl">
           Novas newsletters em breve
         </h3>
-        <p className="mt-3 text-sm text-muted-foreground md:text-base">
+        <p className="mt-3 text-sm text-foreground/70 md:text-base">
           Estamos preparando mais conteúdos editoriais sobre moda circular.
         </p>
       </motion.div>

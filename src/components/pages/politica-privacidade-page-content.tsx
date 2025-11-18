@@ -74,7 +74,7 @@ const sections = [
 export function PoliticaPrivacidadePageContent() {
   return (
     <motion.article
-      className="space-y-12 rounded-3xl border border-border/80 bg-white/90 px-6 py-12 shadow-sm md:px-12"
+      className="space-y-12 rounded-3xl border border-white/50 bg-white/98 px-6 py-12 shadow-sm md:px-12"
       initial={{ opacity: 0, y: 24 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7 }}
@@ -83,19 +83,19 @@ export function PoliticaPrivacidadePageContent() {
         <span className="text-xs font-semibold uppercase tracking-[0.45em] text-secondary-foreground/70">
           política de privacidade
         </span>
-        <h1 className="font-heading text-4xl leading-tight text-primary-foreground md:text-5xl">
+        <h1 className="font-heading text-4xl leading-tight text-foreground md:text-5xl">
           Transparência sobre o uso dos seus dados
         </h1>
-        <p className="max-w-3xl text-base text-muted-foreground md:text-lg">
+        <p className="max-w-3xl text-base text-foreground/70 md:text-lg">
           Prezamos pela proteção dos dados pessoais de nossas leitoras, parceiros e colaboradoras. Conheça abaixo as diretrizes
           que orientam a gestão das informações coletadas pelo Cadê Meu Brechó?.
         </p>
       </header>
 
-      <div className="space-y-10 text-sm leading-relaxed text-muted-foreground md:text-base">
+      <div className="space-y-10 text-sm leading-relaxed text-foreground/70 md:text-base">
         {sections.map((section) => (
           <section key={section.title} className="space-y-3">
-            <h2 className="font-heading text-2xl text-primary-foreground">{section.title}</h2>
+            <h2 className="font-heading text-2xl text-foreground">{section.title}</h2>
             {section.paragraphs.map((paragraph, index) => (
               <p key={index}>{paragraph}</p>
             ))}

@@ -49,20 +49,20 @@ export function GlossarioPageContent() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="rounded-2xl border border-border/60 bg-gradient-to-r from-primary/5 to-secondary/5 px-6 py-6 text-center md:rounded-3xl md:px-8 md:py-8"
+        className="rounded-2xl border border-white/50 bg-white/98 shadow-xl border border-white/50 px-6 py-6 text-center md:rounded-3xl md:px-8 md:py-8"
       >
         <span className="text-xs font-semibold uppercase tracking-[0.4em] text-secondary-foreground/70">
           palavras-chave do projeto
         </span>
-        <h1 className="mt-2 font-heading text-2xl text-primary-foreground md:text-3xl">
+        <h1 className="mt-2 font-heading text-2xl text-foreground md:text-3xl">
           Glossário de Moda Circular
         </h1>
-        <p className="mt-2 text-sm text-muted-foreground">
+        <p className="mt-2 text-sm text-foreground/70">
           Entenda os principais conceitos utilizados pelo Cadê Meu Brechó?
         </p>
       </motion.div>
 
-      <section className="grid gap-6 md:grid-cols-2">
+      <section className="grid gap-6 md:grid-cols-2 bg-transparent">
         {glossaryTerms.map((item, index) => (
           <motion.article
             key={item.term}
@@ -71,17 +71,17 @@ export function GlossarioPageContent() {
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6, delay: index * 0.05 }}
           >
-            <Card className="h-full border-border/70 bg-white/85 shadow-sm transition-shadow hover:shadow-lg">
+            <Card className="h-full border-white/50 bg-white/98 shadow-sm  ">
               <CardHeader>
-                <Badge className="w-fit rounded-full bg-primary/15 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.3em] text-primary-foreground">
+                <Badge className="w-fit rounded-full bg-primary/15 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.3em] text-foreground">
                   conceito
                 </Badge>
-                <CardTitle className="mt-3 font-heading text-xl text-primary-foreground sm:text-2xl">
+                <CardTitle className="mt-3 font-heading text-xl text-foreground sm:text-2xl">
                   {item.term}
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">
+                <p className="text-sm leading-relaxed text-foreground/70 sm:text-base">
                   {item.definition}
                 </p>
               </CardContent>

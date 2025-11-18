@@ -46,23 +46,23 @@
 :root {
   --radius: 1.5rem;
   --background: #ffffff;
-  --foreground: #333333;
+  --foreground: #1a1a1a;
   --card: #ffffff;
-  --card-foreground: #333333;
+  --card-foreground: #1a1a1a;
   --popover: #ffffff;
-  --popover-foreground: #333333;
-  --primary: #f8bbd0;
-  --primary-foreground: #2d1f24;
-  --secondary: #a5d6a7;
-  --secondary-foreground: #1f3a2f;
-  --muted: #f5f5f5;
-  --muted-foreground: #5f5f5f;
-  --accent: #e8f5e9;
-  --accent-foreground: #1f3a2f;
+  --popover-foreground: #1a1a1a;
+  --primary: #d4a5a5;
+  --primary-foreground: #1a1a1a;
+  --secondary: #9eb3a8;
+  --secondary-foreground: #1a1a1a;
+  --muted: #f8f8f8;
+  --muted-foreground: #666666;
+  --accent: #e8d5d5;
+  --accent-foreground: #1a1a1a;
   --destructive: #b00020;
-  --border: #f0f0f0;
-  --input: #e0e0e0;
-  --ring: #f8bbd0;
+  --border: #e0e0e0;
+  --input: #e8e8e8;
+  --ring: #d4a5a5;
   --chart-1: #f8bbd0;
   --chart-2: #a5d6a7;
   --chart-3: #ffab91;
@@ -117,12 +117,11 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply min-h-screen bg-background text-foreground;
-    background-image: radial-gradient(circle at 10% 20%, #fce4ec 0, transparent 45%),
-      radial-gradient(circle at 90% 10%, #e8f5e9 0, transparent 50%);
-    background-attachment: fixed;
+    @apply min-h-screen text-foreground;
   }
   nextjs-portal {
     display: none !important;
   }
 }
+
+

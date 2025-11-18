@@ -27,7 +27,7 @@ const links = [
 
 export function SiteFooter() {
   return (
-    <footer className="mt-8 border-t border-border/70 bg-white/80">
+    <footer className="mt-8 border-t border-white/50 bg-white/98 shadow-xl">
       <div className="mx-auto flex w-full max-w-[1600px] flex-col gap-10 px-4 py-10 md:px-6 lg:px-14">
         <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
           <div className="max-w-lg space-y-3">

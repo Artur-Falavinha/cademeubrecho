@@ -6,6 +6,7 @@ import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { BackToTopButton } from "@/components/back-to-top-button";
+import { PageBackground } from "@/components/page-background";
 
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
@@ -82,7 +83,8 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={cn("antialiased", dmSans.variable, inter.variable)}>
-        <div className="flex min-h-screen flex-col bg-background/90">
+        <PageBackground />
+        <div className="flex min-h-screen flex-col">
           <SiteHeader />
           <main className="flex-1">
             <div className="mx-auto w-full max-w-[1600px] px-4 pt-4 md:px-6 lg:px-14">
