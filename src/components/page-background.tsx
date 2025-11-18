@@ -20,9 +20,9 @@ export function PageBackground() {
   }, []);
 
   const background = pathname === "/" 
-    ? "/background1.jpg" 
+    ? (isMobile ? "/background3.jpg" : "/background1.jpg")
     : pathname.startsWith("/quem-somos")
-    ? "/background4.jpg"
+    ? (isMobile ? "/background6.jpg" : "/background4.jpg")
     : (() => {
         const bgArray = isMobile ? backgrounds.mobile : backgrounds.desktop;
         const bgIndex = Math.abs(pathname.split("").reduce((acc, char) => acc + char.charCodeAt(0), 0)) % bgArray.length;
