@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { Music3 } from "lucide-react";
 import { assetPath } from "@/lib/assetPath";
 
 import { Button } from "@/components/ui/button";
@@ -10,11 +11,9 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 
 const articleHero = {
-  title:
-    "Moda Sustentável em Curitiba: descubra os brechós que transformam consumo em consciência.",
-  subtitle:
-    "Uma curadoria editorial e afetiva para quem busca circularidade, criatividade e propósito na hora de se vestir.",
-  highlight: "edição 01 • moda circular curitibana",
+  title: "Ouça nosso podcast sobre moda circular",
+  subtitle: "Conversas e entrevistas com quem transforma o consumo em Curitiba",
+  highlight: "podcast • cadê meu brechó",
 };
 
 const featuredArticle = {
@@ -40,46 +39,38 @@ const realArticleContent = [
 
 export function HomePageContent() {
   return (
-    <div className="space-y-10 sm:space-y-12 md:space-y-16">
+    <div className="space-y-6 sm:space-y-12 md:space-y-16">
       <motion.section
-        className="relative h-[calc(100vh-90px)] overflow-hidden rounded-3xl border border-white/50 bg-white shadow-sm"
+        className="relative aspect-video md:h-[calc(100vh-120px)] md:aspect-auto overflow-hidden rounded-3xl border border-white/50 bg-white shadow-sm"
         initial={{ opacity: 0, y: 24 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        <div className="absolute inset-0">
-          <Image
-            src={assetPath("/backgroundFirstSection.png")}
-            alt="Editorial Cadê Meu Brechó?"
-            fill
-            className="object-cover object-center opacity-70 md:object-cover"
-            priority
-          />
+        <div className="absolute inset-0 flex items-center justify-center">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            webkit-playsinline="true"
+            className="min-h-full min-w-full object-cover opacity-70"
+            style={{ pointerEvents: 'none', objectPosition: 'center', maxWidth: 'none' }}
+          >
+            <source src={assetPath("/vinheta convidada especial.mp4")} type="video/mp4" />
+          </video>
           <div className="absolute inset-0 bg-gradient-to-br from-black/50 via-black/30 to-transparent" />
         </div>
 
-        <div className="relative z-10 flex h-full flex-col justify-center gap-5 px-5 py-8 text-white sm:gap-6 sm:px-6 md:gap-7 md:px-12 lg:px-16">
-          <h1 className="max-w-3xl font-heading text-[1.65rem] leading-[1.15] text-white drop-shadow-[0_6px_16px_rgba(0,0,0,0.7)] sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
-            {articleHero.title}
-          </h1>
-          <p className="max-w-2xl text-[0.95rem] leading-relaxed text-white/95 drop-shadow-[0_4px_12px_rgba(0,0,0,0.6)] sm:text-lg md:text-xl lg:text-2xl">
-            {articleHero.subtitle}
-          </p>
-          <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
-            <Button
-              asChild
-              className="h-12 w-full rounded-full bg-primary px-6 text-sm font-semibold shadow-lg hover:bg-primary/90 sm:h-14 sm:w-auto sm:px-8 sm:text-base"
-            >
-              <Link href="/newsletter" prefetch={false}>Ver Newsletters</Link>
-            </Button>
-            <Button
-              variant="outline"
-              asChild
-              className="h-12 w-full rounded-full border-white/70 bg-white/15 px-6 text-sm font-semibold text-white backdrop-blur hover:bg-white/25 hover:text-white sm:h-14 sm:w-auto sm:px-8 sm:text-base"
-            >
-              <Link href="/conteudos" prefetch={false}>Conheça o podcast</Link>
-            </Button>
-          </div>
+        <div className="relative z-10 flex h-full flex-col justify-end items-end md:items-center px-5 py-3 text-white md:py-8 sm:px-6 md:px-12 lg:px-16">
+          <Button
+            asChild
+            className="group h-8 rounded-full bg-white/20 backdrop-blur-md border-2 border-white/50 px-3 text-[10px] font-bold text-white shadow-lg hover:bg-white/30 hover:border-white/70 transition-all duration-300 md:h-16 md:border-2 md:px-12 md:text-lg md:shadow-xl flex items-center gap-1 md:gap-3"
+          >
+            <Link href="https://open.spotify.com/show/63eFvDzN0ZItGM0AUF8fSe?si=h0DWLS-NRPKmJFbWwjji_A" target="_blank" rel="noreferrer">
+              <Music3 className="h-3 w-3 md:h-6 md:w-6 group-hover:scale-110 transition-transform" />
+              Ouvir Podcast
+            </Link>
+          </Button>
         </div>
       </motion.section>
 

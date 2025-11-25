@@ -10,12 +10,12 @@ const teamMembers = [
   {
     name: "Isabelle Sestari",
     image: assetPath("/fotoisabellesestari.jpg"),
-    bio: "Bio em construção. Espaço reservado para contar a história, trajetória e o olhar da idealizadora sobre moda circular.",
+    bio: "Acredito que comunicação e moda são intrinsecamente conectadas: nos comunicamos também pelo que vestimos, e cada peça carrega uma história. Por isso, fez sentido unir esses dois universos neste projeto, explorando como brechós, tendências e narrativas visuais dialogam entre si. A partir dessa interseção, busco compreender e contar histórias que começam no guarda-roupa, mas reverberam muito além dele.",
   },
   {
     name: "Daniela de Gois",
     image: assetPath("/fotodanieladegois.jpg"),
-    bio: "Bio em construção. Espaço dedicado para compartilhar experiências e a conexão com brechós curitibanos.",
+    bio: "Foi pela comunicação que a moda começou a fazer parte da minha vida de um jeito leve e quase imperceptível. Muito antes de imaginar que isso poderia se tornar uma profissão, eu já observava tendências, escrevia sobre o que me inspirava e me encantava com cada detalhe desse universo. Com o tempo, meu interesse só cresceu, especialmente pela moda circular, que abriu em mim um novo olhar mais atento, consciente e questionador sobre a forma como consumimos.",
   },
   {
     name: "Isadora Lopes",
@@ -29,13 +29,13 @@ const teamMembers = [
   },
   {
     name: "Julia Nunes Budal",
-    image: "",
-    bio: "Bio em construção. Este espaço será preenchido com a narrativa da idealizadora e sua visão sobre moda consciente.",
+    image: assetPath("/fotojuliabudal.jpg"),
+    bio: "Como estudante de jornalismo, uso a comunicação para aproximar mais pessoas desse universo. Sou apaixonada por garimpos, histórias e roupas que circulam, e acredito que consumir de forma consciente é também uma forma de cuidar da cidade e das pessoas. Meu trabalho une informação, criatividade e propósito para transformar nossa relação com a moda.",
   },
   {
     name: "Sabrina Gomes",
     image: assetPath("/fotosabrinagomes.png"),
-    bio: "Bio em construção. Reserve este espaço para destacar a jornada e a paixão por moda sustentável.",
+    bio: "Jornalismo nunca foi o meu sonho, mesmo que eu sempre tenha sido apaixonada por textos, poemas e histórias. Do amor pelos livros, uma pesquisa rápida no Google me levou ao início dessa jornada na comunicação. Aqui, eu me encontrei, me tornei a minha melhor versão e passei a entender o que realmente é lutar por um sonho. A paixão por ser jornalista e produtora veio aos poucos — e ficou.",
   },
 ];
 
@@ -52,7 +52,7 @@ export function QuemSomosPageContent() {
           idealizadoras do projeto
         </span>
         <h1 className="font-heading text-3xl leading-tight text-foreground sm:text-4xl md:text-5xl">
-          Quem impulsiona o movimento Cadê Meu Brechó?
+          Quem impulsiona o movimento Cadê Meu Brechó
         </h1>
         <p className="max-w-3xl text-sm text-foreground/70 sm:text-base md:text-lg">
           Somos um coletivo de comunicadoras, pesquisadoras e criadoras que acreditam no poder transformador da moda circular

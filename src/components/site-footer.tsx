@@ -1,26 +1,22 @@
 import Link from "next/link";
 
-import { Mail, Youtube, MessageCircle, Music3 } from "lucide-react";
+import { Mail, Youtube, Music3 } from "lucide-react";
 
 const links = [
   {
     label: "YouTube",
-    href: "https://www.youtube.com/",
+    href: "https://www.youtube.com/@Cad%C3%AAmeuBrech%C3%B3",
     icon: Youtube,
   },
   {
     label: "Spotify",
-    href: "https://open.spotify.com/",
+    href: "https://open.spotify.com/show/63eFvDzN0ZItGM0AUF8fSe?si=h0DWLS-NRPKmJFbWwjji_A",
     icon: Music3,
   },
-  {
-    label: "WhatsApp",
-    href: "https://whatsapp.com/channel/0029VbBaSRE0VycCjdDdNX3I",
-    icon: MessageCircle,
-  },
+
   {
     label: "E-mail",
-    href: "mailto:contato@cademeubrecho.com.br",
+    href: "https://mail.google.com/mail/?view=cm&to=contato.cademeubrecho@gmail.com",
     icon: Mail,
   },
 ];
@@ -35,7 +31,7 @@ export function SiteFooter() {
               movimento editorial
             </span>
             <h2 className="font-heading text-3xl leading-snug text-primary-foreground md:text-4xl">
-              Cadê Meu Brechó? é a curadoria de moda circular que nasce em Curitiba.
+              Cadê Meu Brechó é a curadoria de moda circular que nasce em Curitiba.
             </h2>
             <p className="text-sm text-muted-foreground md:text-base">
               Conteúdos, podcasts, newsletters e um guia completo de brechós para transformar seu jeito de consumir moda com propósito.
@@ -57,7 +53,7 @@ export function SiteFooter() {
           </div>
         </div>
         <div className="flex flex-col gap-4 border-t border-border/70 pt-6 text-xs text-muted-foreground md:flex-row md:items-center md:justify-between">
-          <p>© {new Date().getFullYear()} Cadê Meu Brechó?. Produzido por idealizadoras curitibanas.</p>
+          <p>© {new Date().getFullYear()} Cadê Meu Brechó. Produzido por idealizadoras curitibanas.</p>
           <div className="flex flex-wrap gap-4">
             <Link href="/politica-de-privacidade" prefetch={false} className="hover:text-primary-foreground">
               Política de Privacidade

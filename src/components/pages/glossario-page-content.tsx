@@ -58,7 +58,7 @@ export function GlossarioPageContent() {
           Glossário de Moda Circular
         </h1>
         <p className="mt-2 text-sm text-foreground/70">
-          Entenda os principais conceitos utilizados pelo Cadê Meu Brechó?
+          Entenda os principais conceitos utilizados pelo Cadê Meu Brechó
         </p>
       </motion.div>
 

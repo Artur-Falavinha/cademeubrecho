@@ -1,13 +1,25 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Feather, Sparkles } from "lucide-react";
-
+import { motion, AnimatePresence } from "framer-motion";
+import { Feather, Sparkles, ChevronDown } from "lucide-react";
+import { useState } from "react";
 
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 const newsletters = [
+  {
+    title: "Como os brechós online estão conquistando o público jovem",
+    author: "Julia Budal",
+    content: [
+      "Os brechós online vêm ganhando cada vez mais espaço entre o público jovem, e para entender esse movimento conversamos com quem vive essa transformação diariamente. Maria Vitória Fayad, fundadora do Maria Brechó, explica que a revolução começou quando os brechós deixaram de ser espaços considerados antigos e desorganizados para se tornarem vitrines digitais no Instagram e no WhatsApp. Em dez anos de mercado, ela viu o público migrar do Facebook para o Instagram, e percebeu que hoje a força do negócio está no online. Mesmo mantendo loja física, é nas redes sociais que acontecem as maiores vendas, impulsionadas por tráfego pago, produção constante de conteúdo e parcerias com influenciadoras que ampliam o alcance para todo o Brasil.",
+      "Essa presença digital exige variedade e dinamismo. Para atrair o público mais jovem, o Maria Brechó aposta em conteúdos diversos, vídeos curtos, looks produzidos, fotos no corpo, no manequim e em flat lay, permitindo que cada cliente se identifique com um tipo de linguagem. A ideia é que o feed represente o que é o brechó na prática: um espaço plural, com peças caras e baratas, marcas conhecidas e sem marca, looks joviais e outros elegantes. Essa mistura é fundamental para criar conexão e mostrar que existe algo para todas as idades e estilos.",
+      "A consumidora Leandra Caputo, de 23 anos, confirma a força das redes sociais nesse processo. Ela conta que só passou a olhar para os brechós com interesse depois de ver influenciadoras mostrando garimpos baratos, exclusivos e estilosos. Para ela e para muitos jovens, o que mais atrai é a combinação entre preço acessível, exclusividade e qualidade. Leandra sempre busca peças com bons materiais como couro, cetim, alfaiataria, porque sabe que o brechó pode oferecer itens duráveis por um valor menor. A sensação de \"encontrar uma joia\" no meio de peças usadas também pesa: o garimpo vira uma experiência única, capaz de reforçar identidade e estilo.",
+      "Além disso, o estigma em torno da compra de usados diminuiu muito com plataformas como Enjoei, Repassa e marketplaces, que facilitaram o processo de compra e venda. Mesmo com taxas, a compra continua vantajosa e, para muitos jovens, vender suas próprias peças virou uma forma de girar o guarda-roupa e garantir renda extra. Para Maria, outro ponto importante é o fator humano: brechós são negócios formados por pessoas reais. Essa relação cria uma comunidade forte no Instagram, onde clientes acompanham o dia a dia, perguntam da família, vibram com conquistas e se sentem parte da história do brechó. Essa proximidade gera confiança, algo que o fast fashion não oferece.",
+      "Apesar do sucesso, Maria observa que muitos brechós físicos estão reduzindo ou encerrando suas lojas para investir totalmente no digital. Já os novos empreendimentos do setor, segundo ela, nascem focados no online, com investimento em iluminação, tecnologia, criação de conteúdo e estratégias de marketing. Para Leandra, porém, é importante lembrar que a moda é cíclica, e o consumo de brechó pode ser uma tendência passageira dependendo das narrativas criadas nas redes sociais. Hoje o usado está em alta; amanhã, talvez o \"novo\" volte a ser sinônimo de status. Ainda assim, o acesso à informação transformou o mercado e permitiu que jovens encontrassem nos brechós uma forma de consumir mais livre, econômica e alinhada ao próprio estilo.",
+      "No fim, o que impulsiona os brechós online entre o público jovem é a combinação entre preço, exclusividade, facilidade de compra, influência digital e conexão humana. Um ecossistema que cresce e se adapta ao ritmo das redes sociais, dinâmico, visual, diversificado e cheio de personalidade.",
+    ],
+  },
   {
     title: "Por que Curitiba está apaixonada pela moda de segunda mão?",
     author: "Isabelle Sestari",
@@ -51,6 +63,8 @@ const newsletters = [
 ];
 
 export function NewsletterPageContent() {
+  const [selectedNewsletter, setSelectedNewsletter] = useState<number | null>(null);
+
   return (
     <div className="space-y-8 sm:space-y-10">
       <motion.div
@@ -71,8 +85,7 @@ export function NewsletterPageContent() {
       </motion.div>
 
       <section className="space-y-8 bg-transparent">
-
-        <div className="grid gap-8 md:grid-cols-2 bg-transparent">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 bg-transparent">
           {newsletters.map((newsletter, index) => (
             <motion.article
               key={newsletter.title}
@@ -81,30 +94,94 @@ export function NewsletterPageContent() {
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
-              <Card className="h-full overflow-hidden border-white/50 bg-white/98 shadow-sm  ">
+              <Card 
+                className="h-full overflow-hidden border-white/50 bg-white/98 shadow-sm cursor-pointer transition-all hover:border-primary/50 hover:shadow-lg group"
+                onClick={() => setSelectedNewsletter(selectedNewsletter === index ? null : index)}
+              >
                 <CardHeader className="space-y-4 bg-gradient-to-br from-primary/20 via-white to-secondary/20 px-6 py-6">
                   <Badge className="w-fit rounded-full bg-primary/20 px-4 py-1 text-[11px] font-semibold uppercase tracking-[0.3em] text-foreground">
                     newsletter
                   </Badge>
-                  <CardTitle className="font-heading text-2xl leading-snug text-foreground">
+                  <CardTitle className="font-heading text-xl leading-snug text-foreground">
                     {newsletter.title}
                   </CardTitle>
                   <p className="text-xs font-semibold uppercase tracking-[0.35em] text-foreground/70">
                     por {newsletter.author}
                   </p>
+                  <div className="flex items-center justify-center gap-2 pt-2">
+                    <AnimatePresence mode="wait">
+                      <motion.span
+                        key={selectedNewsletter === index ? "fechar" : "ler"}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="text-xs font-medium text-foreground/60 group-hover:text-primary transition-colors"
+                      >
+                        {selectedNewsletter === index ? "Clique para fechar" : "Clique para ler"}
+                      </motion.span>
+                    </AnimatePresence>
+                    <motion.div
+                      animate={{ 
+                        rotate: selectedNewsletter === index ? 180 : 0,
+                      }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <ChevronDown className="h-5 w-5 text-foreground/50 group-hover:text-primary transition-colors" />
+                    </motion.div>
+                  </div>
                 </CardHeader>
-                <CardContent className="px-6 py-6">
-                  <CardDescription className="space-y-4 text-base leading-relaxed text-foreground/70">
-                    {newsletter.content.map((paragraph, paragraphIndex) => (
-                      <p key={paragraphIndex}>{paragraph}</p>
-                    ))}
-                  </CardDescription>
-                </CardContent>
               </Card>
             </motion.article>
           ))}
         </div>
       </section>
+
+      <AnimatePresence mode="wait">
+        {selectedNewsletter !== null && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+            className="overflow-hidden"
+          >
+            <motion.div
+              initial={{ y: 20 }}
+              animate={{ y: 0 }}
+              exit={{ y: 20 }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
+              className="rounded-3xl border border-white/50 bg-white/98 shadow-xl px-6 py-8 md:px-12"
+            >
+              <div className="space-y-6">
+                <div className="space-y-3">
+                  <Badge className="w-fit rounded-full bg-primary/20 px-4 py-1 text-[11px] font-semibold uppercase tracking-[0.3em] text-foreground">
+                    newsletter completa
+                  </Badge>
+                  <h2 className="font-heading text-3xl leading-tight text-foreground md:text-4xl">
+                    {newsletters[selectedNewsletter].title}
+                  </h2>
+                  <p className="text-sm font-semibold uppercase tracking-[0.35em] text-foreground/70">
+                    por {newsletters[selectedNewsletter].author}
+                  </p>
+                </div>
+                <div className="space-y-4 text-base leading-relaxed text-foreground/70 md:text-lg">
+                  {newsletters[selectedNewsletter].content.map((paragraph, paragraphIndex) => (
+                    <motion.p
+                      key={paragraphIndex}
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.4, delay: paragraphIndex * 0.05 }}
+                    >
+                      {paragraph}
+                    </motion.p>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       <motion.div
         initial={{ opacity: 0 }}

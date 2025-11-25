@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ExternalLink, MessageCircle, Music3, Youtube } from "lucide-react";
+import { ExternalLink, Music3, Youtube } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -13,7 +13,7 @@ const contentChannels = [
     title: "Podcast no Spotify",
     description:
       "Entrevistas, bastidores e relatos sobre moda circular com quem transforma o mercado curitibano.",
-    href: "https://open.spotify.com/",
+    href: "https://open.spotify.com/show/63eFvDzN0ZItGM0AUF8fSe?si=h0DWLS-NRPKmJFbWwjji_A",
     icon: Music3,
     accent: "bg-primary/15 text-foreground",
   },
@@ -21,18 +21,11 @@ const contentChannels = [
     title: "Série visual no YouTube",
     description:
       "Vídeos inspirados em editoriais de moda e documentários curtos sobre os brechós mais criativos da cidade.",
-    href: "https://www.youtube.com/",
+    href: "https://www.youtube.com/@Cad%C3%AAmeuBrech%C3%B3",
     icon: Youtube,
     accent: "bg-secondary/20 text-secondary-foreground",
   },
-  {
-    title: "Comunidade no WhatsApp",
-    description:
-      "Agenda de eventos, alertas de garimpo e conversas semanais com as idealizadoras diretamente no seu celular.",
-    href: "https://whatsapp.com/channel/0029VbBaSRE0VycCjdDdNX3I",
-    icon: MessageCircle,
-    accent: "bg-muted text-foreground/70",
-  },
+
 ];
 
 export function ConteudosPageContent() {
@@ -46,7 +39,7 @@ export function ConteudosPageContent() {
       >
         <div className="space-y-4 sm:space-y-6">
           <span className="text-xs font-semibold uppercase tracking-[0.45em] text-secondary-foreground/70">
-            cadê meu brechó? – podcast e conteúdos exclusivos
+            cadê meu brechó – podcast e conteúdos exclusivos
           </span>
           <h1 className="font-heading text-4xl leading-tight text-foreground md:text-5xl">
             Conteúdos que vestem propósito
@@ -59,7 +52,7 @@ export function ConteudosPageContent() {
 
       </motion.section>
 
-      <section className="grid gap-6 sm:gap-8 md:grid-cols-3 bg-transparent">
+      <section className="grid gap-6 sm:gap-8 md:grid-cols-2 bg-transparent">
         {contentChannels.map((channel, index) => (
           <motion.article
             key={channel.title}

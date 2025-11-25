@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Mail, MessageCircle, Music3, Youtube } from "lucide-react";
+import { Mail, Music3, Youtube } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -11,28 +11,23 @@ import { Separator } from "@/components/ui/separator";
 const contactChannels = [
   {
     label: "E-mail",
-    href: "mailto:contato@cademeubrecho.com.br",
+    href: "https://mail.google.com/mail/?view=cm&to=contato.cademeubrecho@gmail.com",
     description: "Para parcerias, imprensa e projetos especiais, escreva para nosso time editorial.",
     icon: Mail,
   },
   {
     label: "YouTube",
-    href: "https://www.youtube.com/",
+    href: "https://www.youtube.com/@Cad%C3%AAmeuBrech%C3%B3",
     description: "Documentários curtos, entrevistas e séries exclusivas sobre moda circular curitibana.",
     icon: Youtube,
   },
   {
     label: "Spotify",
-    href: "https://open.spotify.com/",
+    href: "https://open.spotify.com/show/63eFvDzN0ZItGM0AUF8fSe?si=h0DWLS-NRPKmJFbWwjji_A",
     description: "Podcast com entrevistas e conversas sobre consumo consciente.",
     icon: Music3,
   },
-  {
-    label: "WhatsApp",
-    href: "https://whatsapp.com/channel/0029VbBaSRE0VycCjdDdNX3I",
-    description: "Canal da comunidade com conteúdos e informações sobre moda circular.",
-    icon: MessageCircle,
-  },
+
 ];
 
 export function ContatoPageContent() {
@@ -45,7 +40,7 @@ export function ContatoPageContent() {
         transition={{ duration: 0.7 }}
       >
         <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.45em] text-secondary-foreground/70">
-          cadê meu brechó? – contato
+          cadê meu brechó – contato
         </span>
         <h1 className="font-heading text-4xl leading-tight text-foreground md:text-5xl">
           Fale com nossas idealizadoras
@@ -82,7 +77,7 @@ export function ContatoPageContent() {
             Nossos canais
           </h2>
           <p className="max-w-3xl text-sm text-foreground/80 md:text-base">
-            Cada plataforma tem um papel no ecossistema Cadê Meu Brechó?. Escolha o canal ideal para conversar com a equipe,
+            Cada plataforma tem um papel no ecossistema Cadê Meu Brechó. Escolha o canal ideal para conversar com a equipe,
             consumir conteúdo exclusivo e acompanhar os bastidores do movimento.
           </p>
         </div>
@@ -151,10 +146,12 @@ export function ContatoPageContent() {
           <div className="space-y-3 rounded-3xl bg-primary/10 p-6 text-foreground">
             <p className="text-xs uppercase tracking-[0.35em]">contato direto</p>
             <Link
-              href="mailto:contato@cademeubrecho.com.br"
+              href="https://mail.google.com/mail/?view=cm&to=contato.cademeubrecho@gmail.com"
+              target="_blank"
+              rel="noreferrer"
               className="block text-lg font-semibold underline-offset-4 hover:underline"
             >
-              contato@cademeubrecho.com.br
+              contato.cademeubrecho@gmail.com
             </Link>
           </div>
         </div>

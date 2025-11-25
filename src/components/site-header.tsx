@@ -29,11 +29,11 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/50 bg-white/98 shadow-xl">
-      <div className="mx-auto flex w-full max-w-[1600px] items-center justify-between gap-6 px-4 py-4 md:px-6 lg:px-14">
-        <Link href="/" className="flex items-center gap-4" onClick={() => setIsOpen(false)}>
-          <div className="relative h-9 w-36 md:h-10 md:w-40">
+      <div className="mx-auto flex w-full max-w-[1600px] items-center justify-between gap-6 px-4 md:px-6 lg:px-14">
+        <Link href="/" className="flex items-center" onClick={() => setIsOpen(false)}>
+          <div className="relative h-16 w-16 md:h-20 md:w-20">
             <Image
-              src={assetPath("/textoLogo.png")}
+              src={assetPath("/logo.png")}
               alt="Cadê Meu Brechó?"
               fill
               sizes="160px"

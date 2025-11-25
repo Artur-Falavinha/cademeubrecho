@@ -6,21 +6,21 @@ const clauses = [
   {
     title: "1. Aceitação dos termos",
     paragraphs: [
-      "Ao acessar o site, newsletter, podcast ou quaisquer outros conteúdos do Cadê Meu Brechó?, você declara ter lido, compreendido e concordado com as condições estabelecidas nestes Termos de Uso.",
+      "Ao acessar o site, podcast no Spotify, canal no YouTube, comunidade no WhatsApp ou quaisquer outros conteúdos do Cadê Meu Brechó?, você declara ter lido, compreendido e concordado com as condições estabelecidas nestes Termos de Uso.",
       "Caso não concorde com algum ponto, recomendamos interromper o uso dos nossos serviços.",
     ],
   },
   {
     title: "2. Objetivo do projeto",
     paragraphs: [
-      "O Cadê Meu Brechó? é uma iniciativa editorial dedicada a mapear brechós de Curitiba, divulgar conteúdos sobre moda circular e promover o consumo consciente.",
+      "O Cadê Meu Brechó? é uma iniciativa editorial dedicada a mapear brechós de Curitiba, divulgar conteúdos sobre moda circular e promover o consumo consciente através de site, podcast no Spotify, canal no YouTube e comunidade no WhatsApp.",
       "Todo o material produzido tem caráter informativo, cultural e educativo, sem vínculo com comercialização direta de produtos.",
     ],
   },
   {
     title: "3. Conteúdo editorial e propriedade intelectual",
     paragraphs: [
-      "Textos, imagens, vídeos, áudios e demais conteúdos publicados são de autoria do Cadê Meu Brechó? ou de parceiros devidamente creditados.",
+      "Textos, imagens, vídeos, áudios de podcast e demais conteúdos publicados no site, Spotify, YouTube e WhatsApp são de autoria do Cadê Meu Brechó? ou de parceiros devidamente creditados.",
       "É permitido compartilhar trechos citando a fonte e o link original. Reproduções integrais, adaptações ou usos comerciais dependem de autorização prévia e expressa.",
     ],
   },
@@ -28,20 +28,21 @@ const clauses = [
     title: "4. Participação de usuárias e parceiros",
     paragraphs: [
       "Contribuições enviadas por leitoras, brechós, marcas ou especialistas podem ser publicadas mediante curadoria editorial, sempre com a devida identificação da autoria.",
-      "Ao enviar materiais, a pessoa colaboradora garante possuir os direitos necessários para publicação e concede licença gratuita para uso no site, newsletter e redes do projeto.",
+      "Ao enviar materiais, a pessoa colaboradora garante possuir os direitos necessários para publicação e concede licença gratuita para uso no site, podcast, YouTube, WhatsApp e demais canais do projeto.",
     ],
   },
   {
-    title: "5. Newsletter e formulários",
+    title: "5. Plataformas externas",
     paragraphs: [
-      "O cadastro na newsletter requer consentimento expresso para receber comunicações periódicas. O cancelamento pode ser feito a qualquer momento pelos links do e-mail ou por solicitação direta.",
-      "Dados pessoais são tratados conforme nossa Política de Privacidade e a legislação vigente.",
+      "Utilizamos plataformas de terceiros para distribuição de conteúdo: Spotify (podcast), YouTube (vídeos) e WhatsApp (comunidade). Ao acessar esses canais, você está sujeito aos termos de uso e políticas de privacidade de cada plataforma.",
+      "Podemos indicar links de brechós parceiros e outros sites relacionados à moda circular. O Cadê Meu Brechó? não se responsabiliza pelo conteúdo, políticas ou práticas desses sites externos.",
     ],
   },
   {
-    title: "6. Links externos",
+    title: "6. Formulários e contato",
     paragraphs: [
-      "Podemos indicar links de terceiros, como brechós parceiros, plataformas de podcast ou redes sociais. O Cadê Meu Brechó? não se responsabiliza pelo conteúdo, políticas ou práticas desses sites.",
+      "O contato conosco pode ser feito através do formulário no site ou diretamente pelo e-mail contato.cademeubrecho@gmail.com.",
+      "Dados pessoais fornecidos são tratados conforme nossa Política de Privacidade e a legislação vigente.",
     ],
   },
   {
@@ -61,7 +62,7 @@ const clauses = [
   {
     title: "9. Contato",
     paragraphs: [
-      "Em caso de dúvidas sobre estes termos, escreva para contato@cademeubrecho.com.br.",
+      "Em caso de dúvidas sobre estes termos, escreva para contato.cademeubrecho@gmail.com.",
       "Última atualização: novembro de 2025.",
     ],
   },
@@ -83,7 +84,7 @@ export function TermosUsoPageContent() {
           Condições para utilizar nossos conteúdos
         </h1>
         <p className="max-w-3xl text-base text-foreground/70 md:text-lg">
-          Estes Termos de Uso norteiam a relação entre o Cadê Meu Brechó? e as pessoas que acessam o site, consomem a newsletter
+          Estes Termos de Uso norteiam a relação entre o Cadê Meu Brechó? e as pessoas que acessam o site, podcast, YouTube, WhatsApp
           ou participam dos nossos projetos editoriais.
         </p>
       </header>
